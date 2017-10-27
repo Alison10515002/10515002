@@ -1,0 +1,79 @@
+1. html {
+2. height: 100%;
+3. }
+4.
+5. body {
+6. background-color: #ffffe7;
+7. height: 100%;
+8. }
+9.
+10. header {
+11. background-color: #c7c7f7;
+12. }
+13.
+14. nav {
+15. background-color: #c7f7f7;
+16. }
+17.
+46. aside {
+47. background-color: #f7c7c7;
+48. width: 15%;
+49. float: left;
+50. }
+51.
+52. article {
+11
+53. background-color: #c7c7c7;
+54. width: 85%;
+55. float: left;
+56. }
+57.
+58. section {
+59. background-color: #c7f7c7;
+60. }
+61.
+62. footer {
+63. background-color: #e7e7e7;
+64. }
+65.
+66. .flexbox {
+67. display: flex;
+68. }
+69.
+70. .blacktext{
+71. color: #0f0f0f;
+72. }
+73.
+74. .redtext {
+75. color: #ff3333;
+76. }
+77.
+78. .bluetext {
+79. color: #3333ff;
+80. }
+81.
+82. .irontext {
+83. color: #efefaf;
+84. }
+85.
+86. .browntext {
+87. color: #9f5f5f;
+88. }
+89.
+90. .sectext {
+91. color: #7f7fef;
+92. }
+93.
+94. .lighttext {
+12
+95. color: #9f9f7f;
+96. }
+97.
+138. #about {
+139. float: right;
+140. margin: 0px 2em 0px 0px;
+141. }
+142.
+151. .milky {
+152. background-color: #ffffea;
+153. }
