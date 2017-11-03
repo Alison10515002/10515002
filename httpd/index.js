@@ -3,46 +3,46 @@
 let http = require('http');
 
 http.createServer((request, response) => {
-let fs = require('fs');
-let postData = ''; // POST 資料
+  let fs = require('fs');
+  let postData = ''; // POST 資料
 
-// 利⽤ 'data' event 消耗掉 data chunk;
-// 'end' event 才會被 fired
-request.on('data', (chunk) => {
-postData += chunk;
+  // 利⽤ 'data' event 消耗掉 data chunk;
+  // 'end' event 才會被 fired
+  request.on('data', (chunk) => {
+    postData += chunk;
 
-console.log(
-' 接收的 POST data ⽚段 k: [' + chunk + '].'
-);
-});
+    console.log(
+      ' 接收的 POST data ⽚段 k: [' + chunk + '].'
+    );
+  });
 
-request.on('end', () => {
-switch (request.url) {
-case '/':
-fs.readFile('../htdocs/index.html', (err, data) => {
-if (err) {
-console.log(' 檔案讀取錯誤');
-}
-else {
-response.writeHead(200, {
-'Content-Type': 'text/html'
-});
+  request.on('end', () => {
+    switch (request.url) {
+      case '/':
+      fs.readFile('../htdocs/index.html', (err, data) => {
+        if (err) {
+          console.log(' 檔案讀取錯誤');
+        }
+        else {
+          response.writeHead(200, {
+            'Content-Type': 'text/html'
+          });
 
-response.write(data);
-response.end();
-}
-});
+          response.write(data);
+          response.end();
+        }
+      });
 
-break;
+      break;
 
-default:
-console.log(' 未定義的存取: ' + request.url);
+      default:
+      console.log(' 未定義的存取: ' + request.url);
 
-response.end();
+      response.end();
 
-break;
-}
-});
+      break;
+    }
+  });
 }).listen(8088);
 
 // log message to Console
