@@ -1,51 +1,48 @@
 1. <!DOCTYPE html>
 2. <html lang="zh-TW">
 3. <head>
-
 4. <meta charset="utf-8">
 5. <meta name="viewport" content="width=device-width,
 initial-scale=1.0">
 7.
-8. <title>Sokoban: A Puzzle Game</title>
+8. <title>Alison: A Puzzle Game</title>
 9. <meta name="author" content="Yiwei Chiao">
-10. <meta name="description" content="A web-based Sokoban
-(倉庫番) game.">
+10. <meta name="description" content="A web-based Alison(倉庫番) game.">
 11.
 12. <link rel="stylesheet" href="assets/css/styles.css">
 13. </head>
 14. <body>
 15. <header id="page_top">
-16. <h1 class="irontext">Sokoban:</h1>
+16. <h1 class="irontext">Alison:</h1>
 17. <h3>⼀個 html5/css3/node.js 的練習專案</h3>
-18. </header>
-19. <nav>
-20. <h2>NAV</h2>
-21. <h3>功能表單 navigation</h3>
-22. <ul>
-23. <li id="sec1">第⼀⾴
-13
-24. <ul class="drop_box" id="drop_1">
-25. <li><a href="#sec1">Section 1</a></li>
-26. </ul>
-27. </li>
-28. <li>第⼆⾴
-29. <ul class="drop_box" id="drop_2">
-30. <li><a href="#sec2">Section 2</a></li>
-31. </ul>
-32. </li>
-33. <li>第三⾴
-34. <ul class="drop_box" id="drop_3">
-35. <li><a href="#sec3">Section 3</a></li>
-36. </ul>
-37. </li>
-38. <li>第四⾴</li>
-39. <li>第五⾴</li>
-40. <li id="about">關 於
-41. <ul class="drop_box" id="drop_about">
-42. <li>⼩組成員</li>
-43. <li>⼯作分⼯</li>
-44. </ul>
-45. </li>
+18. /*
+19. * 選擇 nav 下⾯的 ul 元素下的 * 所有 * li 元素
+20. */
+21. nav > ul > li {
+22. display: inline-block;
+23. height: 2em;
+24. min-width: 4em;
+25. line-height: 2em;
+26. text-align: center;
+27. // 上下 pading: 0; 左右 padding: 0.5 em;
+28. padding: 0px .5em;
+29. // 上下 pading: 0; 左右 padding: 0.25 em;
+30. margin: 0px .25em;
+31. border: none;
+32. background-color: bisque;
+33. }
+34.
+35. /*
+36. * 當滑⿏游標移到 nav > ul > li 上時，更改 * 背景顏⾊ *
+37. */
+38. nav > ul > li:hover {
+39. background-color: #dfdfdf;
+40. }
+41.
+42. nav > ul > li:hover [id*=drop_] {
+43. display: block;
+44. }
+45.
 46. </ul>
 47. </nav>
 48. <div class="flexbox">
@@ -81,3 +78,51 @@ alt="sokoban icons" width="480" height="480">
 77. </footer>
 78. </body>
 79. </html>
+
+98. /*
+99. * 下拉式 (drop-down) 功能表
+100. */
+101. .drop_box {
+102. // 預設不顯⽰;
+103. display: none;
+104. // 去除 ul.li 的項⽬標⽰;
+105. list-style-type: none;
+107. // 位置跟隨它的⽗元素;
+108. position: absolute;
+109. background-color: #f9f9f9;
+110. padding: 0px;
+111. margin: 0px .25em;
+112. }
+113.
+114. /*
+115. * 下拉式功能表裡的 *li* (list item)
+116. * 選單項⽬屬性設定
+117. */
+118. .drop_box ul li {
+119. min-width: 4em;
+120. text-align: center;
+121. padding: 0px .5em;
+122. margin: .25em 0px;
+123. border: none;
+124. background-color: bisque;
+125. }
+126.
+127. /*
+128. * 當滑⿏游標移⾄
+129. * 下拉式功能表裡的 *li* (list item)
+130. * 選單項⽬時，
+131. * 更改屬性設定
+132. */
+133. .drop_box li:hover {
+134. color: DodgerBlue;
+135. background-color: Salmon;
+136. }
+137.
+143. /*
+144. * 當滑⿏游標移⾄ * 關於 * (about) 時，將
+145. * 對應的 drop_box 顯⽰出來
+146. */
+147. #about:hover #drop_about {
+148. display: block;
+149. }
+150.
