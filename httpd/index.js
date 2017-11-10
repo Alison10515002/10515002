@@ -7,7 +7,9 @@ const routingTable = {
     url: '../htdocs/index.html',
     type: 'text/html'
   },
+
   '/styles.css': {
+
     url: '../htdocs/assets/css/styles.css',
     type: 'text/css'
   },
@@ -54,7 +56,7 @@ http.createServer((request, response) => {
   // 'end' event 才會被 fired
   request.on('data', (chunk) => {
     postData += chunk;
-    
+
     console.log(
       ' 接收的 POST data ⽚段 k: [' + chunk + '].'
     );
