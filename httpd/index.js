@@ -19,66 +19,80 @@ http.createServer((request, response) => {
   request.on('end', () => {
     switch (request.url) {
       case '/':
-      fs.readFile('../htdocs/index.html', (err, data) => {
-        if (err) {
-          console.log(' 檔案讀取錯誤');
-        }
-        else {
-          response.writeHead(200, {
+      /**
+      * 利⽤ http.ServerResponse 物件回傳檔案內容
+      *
+      * @name serve
+      * @function
+      * @param response - http.ServerResponse 物件
+      * @param fname - 要回傳的檔案名
+      * @param datatype - 回傳檔案內容的 Mine-Type
+      * @returns {undefined}
+      */
+      let serve = (response, fname, datatype) => {
+        let fs = require('fs');
+        fs.readFile(fname, (err, data) => {
+          if (err) {
+            8
+            console.log(' 檔案讀取錯誤');
+          }
+          else {
+            response.writeHead(200, {
+              'Content-Type': datatype
+            });
+            response.write(data);
+            response.end();
+          }
+        });
+      };
 
-            'Content-Type': 'text/html'
-          });
+    });
 
-          response.write(data);
-          response.end();
-        }
-      });
-
-      break;
+    break;
 
 
-      case '/assets/css/styles.css':
-      fs.readFile('../htdocs/assets/css/styles.css', (err, data) => {
-        if (err) {
-          console.log(' 檔案讀取錯誤');
-        }
-        else {
-          response.writeHead(200, {
-            'Content-Type': 'text/css'
-          });
+    case '/assets/css/styles.css':
+    fs.readFile('../htdocs/assets/css/styles.css', (err, data) => {
+      if (err) {
+        console.log(' 檔案讀取錯誤');
+      }
+      else {
+        response.writeHead(200, {
+          'Content-Type': 'text/css'
+        });
 
-          response.write(data);
-          response.end();
-        }
-      });
+        response.write(data);
+        response.end();
+      }
+    });
 
-      break;
+    break;
 
-      case '/assets/png/SokobanClone_byVellidragon.png':
-      fs.readFile('../htdocs/assets/png/SokobanClone_byVellidragon.png', (err, data) => {
-        if (err) {
-          console.log(' 檔案讀取錯誤');
-        }
-        else {
-          response.writeHead(200, {
-            'Content-Type': 'image/png'
-          });
+    case '/assets/png/SokobanClone_byVellidragon.png':
+    fs.readFile('../htdocs/assets/png/SokobanClone_byVellidragon.png', (err, data) => {
+      if (err) {
+        console.log(' 檔案讀取錯誤');
+      }
+      else {
+        response.writeHead(200, {
+          'Content-Type': 'image/png'
+        });
 
-          response.write(data);
-          response.end();
-        }
-      });
+        response.write(data);
+        response.end();
+      }
+    });
 
-      break;
+    break;
 
-      default:
-      console.log(' 未定義的存取: ' + request.url);
+    default:
+    console.log(' 未定義的存取: ' + request.url);
 
-      response.end();
+    response.end();
 
-      break;
-    }
-  });
+    break;
+  }
+});
 }).listen(8088);
 
 // log message to Console
