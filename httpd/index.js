@@ -18,14 +18,15 @@ http.createServer((request, response) => {
 
   request.on('end', () => {
     switch (request.url) {
-      case '/favicon.ico':
-      fs.readFile('/favicon.ico', (err, data) => {
+      case '/':
+      fs.readFile('../htdocs/index.html', (err, data) => {
         if (err) {
           console.log(' 檔案讀取錯誤');
         }
         else {
           response.writeHead(200, {
-            'Content-Type': 'text/ico'
+
+            'Content-Type': 'text/html'
           });
 
           response.write(data);
@@ -60,7 +61,7 @@ http.createServer((request, response) => {
         }
         else {
           response.writeHead(200, {
-            'Content-Type': 'text/png'
+            'Content-Type': 'image/png'
           });
 
           response.write(data);
