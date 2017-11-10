@@ -34,6 +34,56 @@ http.createServer((request, response) => {
       });
 
       break;
+      case '/':
+      fs.readFile('../htdocs/index.html', (err, data) => {
+        if (err) {
+          console.log(' 檔案讀取錯誤');
+        }
+        else {
+          response.writeHead(200, {
+            'Content-Type': 'text/html'
+          });
+
+          response.write(data);
+          response.end();
+        }
+      });
+
+      break;
+
+      case '/assets/css/styles.css':
+      fs.readFile('/assets/css/styles.css', (err, data) => {
+        if (err) {
+          console.log(' 檔案讀取錯誤');
+        }
+        else {
+          response.writeHead(200, {
+            'Content-Type': 'text/css'
+          });
+
+          response.write(data);
+          response.end();
+        }
+      });
+
+      break;
+
+      case '/assets/png/SokobanClone_byVellidragon.png':
+      fs.readFile('/assets/png/SokobanClone_byVellidragon.png', (err, data) => {
+        if (err) {
+          console.log(' 檔案讀取錯誤');
+        }
+        else {
+          response.writeHead(200, {
+            'Content-Type': 'text/png'
+          });
+
+          response.write(data);
+          response.end();
+        }
+      });
+
+      break;
 
       default:
       console.log(' 未定義的存取: ' + request.url);
