@@ -8,14 +8,14 @@ const routingTable = {
     type: 'text/html'
   },
 
-  '/styles.css': {
+  '/assets/css/styles.css': {
 
     url: '../htdocs/assets/css/styles.css',
     type: 'text/css'
   },
-  '/SokobanClone_byVellidragon.png': {
+  '/assets/png/SokobanClone_byVellidragon.png': {
     url: '../htdocs/assets/png/SokobanClone_byVellidragon.png',
-    type: 'text/css'
+    type: 'image/png'
   },
 };
 
@@ -46,6 +46,7 @@ let serve = (response, fname, datatype) => {
     }
   });
 };
+
 
 http.createServer((request, response) => {
   let fs = require('fs');
