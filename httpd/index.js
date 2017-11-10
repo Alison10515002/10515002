@@ -28,7 +28,7 @@ let serve = (response, fname, datatype) => {
 http.createServer((request, response) => {
   let fs = require('fs');
   let postData = '';
-  10
+
   // 利⽤ 'data' event 消耗掉 data chunk;
   // 'end' event 才會被 fired
   request.on('data', (chunk) => {
@@ -60,6 +60,6 @@ http.createServer((request, response) => {
   });
 }).listen(8088);
 // log message to Console
-11
+
 console.log(' 伺服器啓動，連線 url: http://127.0.0.1:8088/');
 // index.js
