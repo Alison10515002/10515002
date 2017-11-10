@@ -38,7 +38,7 @@ http.createServer((request, response) => {
 
 
       case '/assets/css/styles.css':
-      fs.readFile('/assets/css/styles.css', (err, data) => {
+      fs.readFile('../htdocs/assets/css/styles.css', (err, data) => {
         if (err) {
           console.log(' 檔案讀取錯誤');
         }
@@ -55,7 +55,7 @@ http.createServer((request, response) => {
       break;
 
       case '/assets/png/SokobanClone_byVellidragon.png':
-      fs.readFile('/assets/png/SokobanClone_byVellidragon.png', (err, data) => {
+      fs.readFile('../htdocs/assets/png/SokobanClone_byVellidragon.png', (err, data) => {
         if (err) {
           console.log(' 檔案讀取錯誤');
         }
