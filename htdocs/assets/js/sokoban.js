@@ -64,3 +64,5 @@ window.addEventListener('load', () => {
     document.getElementById('cursor_y').textContent = e.clientY;
   });
 });
+
+// sokoban.js
