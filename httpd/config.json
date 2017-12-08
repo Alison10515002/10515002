@@ -9,6 +9,6 @@
   },
   "/sokoban.js": {
     "url": "../htdocs/js/sokoban.js",
-    "type": "text/js"
+    "type": "text/javascript"
   }
 }
