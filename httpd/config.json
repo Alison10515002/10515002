@@ -9,10 +9,10 @@
   },
   "/sokoban.js": {
     "url": "../htdocs/js/sokoban.js",
-    "type": "text/javascript"
+    "type": "appliction/javascript"
   },
   "/SokobanClone_byVellidragon.png": {
-    "url": "../htdocs/assets/SokobanClone_byVellidragon.png",
+    "url": "../htdocs/assets/png/SokobanClone_byVellidragon.png",
     "type": "image/png"
   }
 }
