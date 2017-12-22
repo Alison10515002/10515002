@@ -108,7 +108,6 @@ let drawGameBoard = (ctx, gameState) => {
         sprites.faceUp(ctx);
         break;
         case ' ':
-        12
         sprites.floor(ctx);
         break;
         case '.':
