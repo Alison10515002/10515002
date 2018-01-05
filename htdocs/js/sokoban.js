@@ -566,6 +566,9 @@ let sokoban = {
   update: function (e) {
     this.move(e);
     this.paint();
+    //
+    
+    alert('You Win!!');
   },
 };
 
