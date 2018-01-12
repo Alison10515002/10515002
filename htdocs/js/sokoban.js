@@ -41,14 +41,14 @@ const SOKOBAN = {
 let levels = [
   [
     "############",
-    "#         #",
+    "#          #",
     "#          #",
     "#          #",
     "#   ####   #",
     "#          #",
     "#    .     #",
     "#    $     #",
-    "#    @    #",
+    "#    @     #",
     "#          #",
     "#          #",
     "############"
@@ -568,7 +568,7 @@ let sokoban = {
     this.paint();
     //
 
-    if (goal==boxOnGoal){
+    if (this.level==boxOnGoal){
     alert('恭喜!!你過關了~');}
 
   },
