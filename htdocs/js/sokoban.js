@@ -567,6 +567,8 @@ let sokoban = {
     this.move(e);
     if (isBoxOnGoal: function ({x, y})) {
       return (this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL);
+    }
+    
     this.paint();
     //
 
