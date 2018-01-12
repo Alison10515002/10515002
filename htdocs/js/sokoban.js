@@ -41,14 +41,14 @@ const SOKOBAN = {
 let levels = [
   [
     "############",
-    "#         .#",
+    "#         #",
     "#          #",
     "#          #",
     "#   ####   #",
     "#          #",
-    "#          #",
+    "#    .     #",
     "#    $     #",
-    "#    @     #",
+    "#    @    #",
     "#          #",
     "#          #",
     "############"
@@ -567,11 +567,7 @@ let sokoban = {
     this.move(e);
     this.paint();
     //
-    boxOnGoal: function (oldCell, newCell) {
-      return this
-      .moveGoal(.);
-      .moveGoal(*);
-    },
+
 
     alert('恭喜!!你過關了~');
 
