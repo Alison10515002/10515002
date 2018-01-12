@@ -568,7 +568,7 @@ let sokoban = {
     this.paint();
     //
     $(function (x,y)){
-    if (this.level (function *(x1),*(x2)) {
+    if (this.level (*(x1),*(x2)) {
       boxOnGoal;
     },this)}
     if (boxOnGoal==$('*')){
