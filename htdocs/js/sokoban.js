@@ -567,10 +567,8 @@ let sokoban = {
     this.move(e);
     this.paint();
     //
-    if (boxOnGoal){
-      alert('恭喜!!你過關了~');
-    },
-
+    if BOX_ON_GOAL
+    alert('恭喜!!你過關了~');
   },
 };
 
