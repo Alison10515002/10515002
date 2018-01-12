@@ -567,12 +567,13 @@ let sokoban = {
     this.move(e);
     this.paint();
     //
-    $(function (x,y)){
-    if (this.level (*(x1),*(x2)) {
-      boxOnGoal;
-    },this)}
-    if (boxOnGoal==$('*')){
-    alert('恭喜!!你過關了~');}
+    boxOnGoal: function (oldCell, newCell) {
+      return this
+      .moveGoal(.);
+      .moveGoal(*);
+    },
+
+    alert('恭喜!!你過關了~');
 
   },
 };
