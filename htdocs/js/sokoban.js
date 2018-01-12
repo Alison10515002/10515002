@@ -567,7 +567,7 @@ let sokoban = {
     this.move(e);
     this.paint();
     //
-    if (this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL);){
+    if (this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL){
 
     alert('恭喜!!你過關了~');
   }
