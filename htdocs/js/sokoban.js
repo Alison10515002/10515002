@@ -567,8 +567,8 @@ let sokoban = {
     this.move(e);
     this.paint();
     //
-    
-    alert('You Win!!');
+    if (boxOnGoal)
+    alert('恭喜!!你過關了~');
   },
 };
 
