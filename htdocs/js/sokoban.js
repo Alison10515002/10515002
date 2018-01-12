@@ -566,7 +566,7 @@ let sokoban = {
   update: function (e) {
     this.move(e);
 
-      if(BOX == SOKOBAN.BOX_ON_GOAL){
+      if(isBox == isBoxOnGoal){
       alert('恭喜!!你過關了~');
 
     }
