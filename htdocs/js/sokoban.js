@@ -565,14 +565,15 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    if (isBoxOnGoal: function ({x, y})) {
-      return (this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL);
+    if (this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL) {
+      alert('恭喜!!你過關了~');
+      return;
     }
 
     this.paint();
     //
 
-    alert('恭喜!!你過關了~');}
+
 
   },
 };
