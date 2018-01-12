@@ -566,7 +566,7 @@ let sokoban = {
   update: function (e) {
     this.move(e);
     function win(){
-      if($("boxOnGoal").length===goal){
+      if($(this.level[y].charAt(x))){
       alert('恭喜!!你過關了~');
       return;
     }
