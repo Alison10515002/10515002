@@ -571,9 +571,9 @@ let sokoban = {
       return (this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL);
       if (this.BoxOnGoal(cell)) {
         this.putGoal(cell);
-
+}
     alert('恭喜!!你過關了~');
-  }
+
   },
 };
 
