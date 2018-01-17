@@ -565,10 +565,11 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    this.paint();
-    //
     if(BOX_ON_GOAL){
     alert('恭喜!!你過關了~');}
+    this.paint();
+    //
+
 
   },
 };
