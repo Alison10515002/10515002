@@ -565,7 +565,7 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    if(this.level[y] = replaceAt(this.level[y], x, SOKOBAN.BOX_ON_GOAL){
+    if(this.level[y], x, SOKOBAN.BOX_ON_GOAL){
     alert('恭喜!!你過關了~');}
     this.paint();
     //
