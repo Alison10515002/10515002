@@ -565,7 +565,7 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    if(x: 32,y: 0){
+    if(box x: 32,y: 0){
     alert('恭喜!!你過關了~');}
     this.paint();
     //
