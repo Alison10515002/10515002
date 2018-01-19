@@ -598,7 +598,7 @@ let controlPane = (sokoban) => {
     btn.value = level;
 
     btn.addEventListener('click', e => {
-      alert ('$(e.target.value) clicked');
+      alert ('請開始遊戲');
       sokoban.start(e.target.value);
     });
 
