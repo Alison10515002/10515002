@@ -402,7 +402,7 @@ let prototypeGameState = {
     this.level[y] = replaceAt(this.level[y], x, SOKOBAN.BOX_ON_GOAL);
     if (true) {
       alert('恭喜!!你過關了~');}
-      else {
+      else　if (){
         alert('請繼續努力!革命尚未成功^v^');
       }
     return this;
