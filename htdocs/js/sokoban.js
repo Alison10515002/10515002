@@ -400,7 +400,8 @@ let prototypeGameState = {
 
   putBoxOnGoal: function ({x, y}) {
     this.level[y] = replaceAt(this.level[y], x, SOKOBAN.BOX_ON_GOAL);
-
+    if (x=12,y=2){
+    alert('恭喜!!你過關了~');}
     return this;
   },
 
@@ -565,8 +566,7 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    if (boxOnGoal x=12,y=2){
-    alert('恭喜!!你過關了~');}
+
 
     this.paint();
     //
