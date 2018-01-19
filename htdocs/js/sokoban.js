@@ -565,11 +565,11 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    if (this.boxOnGoal) {
-     this.putBoxOnGoal=this.moveBoxIn
-     this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL;
+    if putBoxOnGoal(ALL true) {
       alert('恭喜!!你過關了~');}
-
+      else {
+        alert('請繼續努力!革命尚未成功^v^');
+      }
     this.paint();
     //
 
