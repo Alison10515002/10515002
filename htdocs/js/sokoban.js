@@ -565,7 +565,7 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    if putBoxOnGoal(ALL true) {
+    if (this.isBox(this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL) {
       alert('恭喜!!你過關了~');}
       else {
         alert('請繼續努力!革命尚未成功^v^');
