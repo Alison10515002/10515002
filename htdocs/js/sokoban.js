@@ -565,8 +565,8 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    if (this.isBox(this.putBoxOnGoal(cell))) {
-      this.moveBoxIn.boxOnGoal;
+    if (boxOnGoal) {
+     this.moveBoxIn=this.putBoxOnGoal(cell);
       alert('恭喜!!你過關了~');}
 
     this.paint();
