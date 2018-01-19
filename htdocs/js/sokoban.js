@@ -400,7 +400,7 @@ let prototypeGameState = {
 
   putBoxOnGoal: function ({x, y}) {
     this.level[y] = replaceAt(this.level[y], x, SOKOBAN.BOX_ON_GOAL);
-    if (ALL putBoxOnGoal){
+    if (ALL SOKOBAN.BOX_ON_GOAL){
     alert('恭喜!!你過關了~');}
     else {
       alert('請繼續努力!革命尚未成功^v^');
