@@ -567,7 +567,7 @@ let sokoban = {
     this.move(e);
 
     alert('恭喜!!你過關了~');
-  
+
     this.paint();
     //
 
@@ -598,7 +598,7 @@ let controlPane = (sokoban) => {
     btn.value = level;
 
     btn.addEventListener('click', e => {
-      alert ((e.target.value) clicked);
+      alert ('$(e.target.value) clicked');
       sokoban.start(e.target.value);
     });
 
