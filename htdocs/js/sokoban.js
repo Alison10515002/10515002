@@ -565,7 +565,7 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    if (this.level[y] = replaceAt(this.level[y], x, SOKOBAN.BOX_ON_GOAL)) {
+    if putBoxOnGoal: function (true) {
       alert('恭喜!!你過關了~');}
     else　if (SOKOBAN.BOX_ON_GOAL==NULL){
         alert('請繼續努力!革命尚未成功^v^');
