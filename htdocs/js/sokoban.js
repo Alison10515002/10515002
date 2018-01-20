@@ -565,6 +565,10 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
+    let cell = {
+      x: Math.floor(e.offsetX / 32),
+      y: Math.floor(e.offsetY / 32),
+    };
     if (this.moveBoxIn(this.putBoxOnGoal(cell))) {
       this.goal();
       this.level[y].charAt(x) == SOKOBAN.BOX_ON_GOAL;
