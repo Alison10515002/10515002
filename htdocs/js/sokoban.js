@@ -570,8 +570,7 @@ let sokoban = {
       y: Math.floor(e.offsetY / 32),
     };
     if (this.moveBoxIn(this.isGoal(cell))) {
-      this.goal();
-
+      
       alert('恭喜!!你過關了~');}
 
     this.paint();
