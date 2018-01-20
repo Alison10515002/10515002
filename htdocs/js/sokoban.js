@@ -237,6 +237,9 @@ let prototypeGameState = {
   moveBoxIn: function (cell) {
     if (this.isGoal(cell)) {
       this.putBoxOnGoal(cell);
+      if (true) {
+        alert('求解~求檢討!!到底為甚麼錯QQ讓我死個明白吧~');}
+        
     }
     else {
       this.putBox(cell);
@@ -565,13 +568,6 @@ let sokoban = {
   */
   update: function (e) {
     this.move(e);
-    let cell = {
-      x: Math.floor(e.offsetX / 32),
-      y: Math.floor(e.offsetY / 32),
-    };
-    if (this.moveBoxIn(this.isGoal(cell))) {
-      this.putBoxOnGoal(cell);
-      alert('求解~求檢討!!到底為甚麼錯QQ讓我死個明白吧~');}
 
     this.paint();
     //
